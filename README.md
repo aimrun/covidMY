@@ -1,5 +1,5 @@
 ## INTRODUCTION
-Malaysia's Ministry of Health provides Covid-19 related data on [their Github repository](https://github.com/MoH-Malaysia/covid19-public/) but missing from the data set is the compiled daily reports published on [KKM's blog](https://kpkesihatan.com/) showing the deceased and their associated co-morbidities.  Individual tables from each publication day of KKM's blog were manually scraped and compiled for the period of 8th October 2020 (first daily report) to 13th July 2021 (last daily report).
+Malaysia's Ministry of Health provides Covid-19 related data on [their Github repository](https://github.com/MoH-Malaysia/covid19-public/) but missing from the data set is the compiled daily reports published on [KKM's blog](https://kpkesihatan.com/) showing the deceased and their associated co-morbidities.  [Individual tables](https://raw.githubusercontent.com/aimrun/covidMY/main/exampletable.jpg) from each publication day of KKM's blog were manually scraped and compiled for the period of 8th October 2020 (first daily report) to 13th July 2021 (last daily report).
 
 ## METHODOLOGY
 ### Data Cleansing & Omission
