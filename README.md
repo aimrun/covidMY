@@ -3,7 +3,7 @@ Malaysia's Ministry of Health provides Covid-19 related data on [their Github re
 
 ## METHODOLOGY
 ### Data Cleansing & Omission
-As the co-morbidity data was provided in Bahasa Malaysia and had typos (darah tinggi / darah tiggi), unique strings were extracted using Google Sheets UNIQUE function and classified according to WHO ICD-11 Codes.  A VLOOKUP function was used to replace unique strings with the corresponding ICD-11 code.
+As the co-morbidity data was [provided in Bahasa Malaysia](https://github.com/aimrun/covidMY/blob/main/BM.csv) and had typos (darah tinggi / darah tiggi), unique strings were extracted using Google Sheets UNIQUE function and classified according to WHO ICD-11 Codes.  A VLOOKUP function was used to replace unique strings with the [corresponding ICD-11 code](https://github.com/aimrun/covidMY/blob/main/ICD11.csv).
 
 For the purposes of co-morbidity analysis, the following data/column were omitted:
 1.  Hospital of Admission & State
