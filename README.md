@@ -1,5 +1,28 @@
-# covid_my_deaths
+## INTRODUCTION
+Malaysia's Ministry of Health provides Covid-19 related data on [their Github repository](https://github.com/MoH-Malaysia/covid19-public/) but missing from the data set is the compiled daily reports published on [KKM's blog](https://kpkesihatan.com/) showing the deceased and their associated co-morbidities.  Individual tables from each publication day of KKM's blog were manually scraped and compiled for the period of 8th October 2020 (first daily report) to 13th July 2021 (last daily report).
 
-Data obtained from scraping html table flags of daily reports of covid deaths in Malaysia on kpkesihatan.com from the period of 08 October 2020 (death #142) to 13 July 2021 (death #6385).  kpkesihatan.com stopped reporting death details on 13 July 2021.
-  
-Data cleaned up for legibility.  Important and consistent columns displayed first and the last few columns were the unimportant and inconsistent columns during the reporting period.
+## METHODOLOGY
+### Data Cleansing & Omission
+As the co-morbidity data was provided in Bahasa Malaysia and had typos (darah tinggi / darah tiggi), unique strings were extracted using Google Sheets UNIQUE function and classified according to WHO ICD-11 Codes.  A VLOOKUP function was used to replace unique strings with the corresponding ICD-11 code.
+
+For the purposes of co-morbidity analysis, the following data/column were omitted:
+1.  Hospital of Admission & State
+2.  Nationality
+3.  Date of Death, Gender, Age
+4.  Mortality Number
+
+905 out of 6,240 mortalities recorded had no medical history or were missing a medical history, thus were omitted to enable co-morbidity analysis.
+
+## Constructing the Co-Occurrence Matrix
+For each row of data (representing one patient), A Python script (ITERTOOLS toolbox) was used to construct pair combinations of diseases.  An example output of a patient with 3 diseases (Diabetes, Hypertension, Cancer) would be:
+
+| Pair 1    | Pair 2        |
+|-----------|---------------|
+| Diabetes  | Hypertension  |
+| Diabetes  | Cancer        |
+| Cancer    | Hypertension  |
+
+Combinations, instead of permutations, were used in constructing the co-occurence matrix as there were no directional data on whether any disease caused another disease.  The result of the combinations for each patient were written to a CSV file.
+
+## Visualisation
+A network graph visualisation tool was deemed the best way to visualise probabilities of one disease co-occurring with other diseases.  The result contained within the CSV file above were fed into GEPHI and further annotated to provide description of the ICD-11 code description.
