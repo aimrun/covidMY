@@ -25,4 +25,6 @@ For each row of data (representing one patient), A Python script (ITERTOOLS tool
 Combinations, instead of permutations, were used in constructing the co-occurence matrix as there were no directional data on whether any disease caused another disease.  The result of the combinations for each patient were written to a CSV file.
 
 ## Visualisation
-A network graph visualisation tool was deemed the best way to visualise probabilities of one disease co-occurring with other diseases.  The result contained within the CSV file above were fed into GEPHI and [further annotated](https://github.com/aimrun/covidMY/blob/main/cooccurrencegraph.png) to provide description of the ICD-11 code description.
+A network graph visualisation tool was deemed the best way to visualise probabilities of one disease co-occurring with other diseases.  The result contained within the CSV file above were fed into GEPHI and annotated to provide description of the ICD-11 code description.
+
+![alt text](https://github.com/aimrun/covidMY/blob/main/cooccurrencegraph.png)
