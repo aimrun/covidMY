@@ -27,4 +27,4 @@ Combinations, instead of permutations, were used in constructing the co-occurenc
 ## Visualisation
 A network graph visualisation tool was deemed the best way to visualise probabilities of one disease co-occurring with other diseases.  The result contained within the CSV file above were fed into GEPHI and annotated to provide description of the ICD-11 code description.
 
-![alt text](https://github.com/aimrun/covidMY/blob/main/cooccurrencegraph.png)
+![alt text](https://github.com/aimrun/covidMY/blob/main/diseasecooccurrencegraph.png)
